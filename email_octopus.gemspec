@@ -11,8 +11,8 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'API Client for Email Octopus'
   spec.description   = 'API client for Email Octopus'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
-  spec.license       = "MIT"
+  spec.homepage      = 'https://github.com/tubbo/email_octopus'
+  spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
