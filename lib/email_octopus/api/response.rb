@@ -1,14 +1,10 @@
 # frozen_string_literal: true
-require 'net/http'
-require 'json'
-require 'forwardable'
-require 'email_octopus/api/error'
 
 module EmailOctopus
   class API
     # Response object that parses out JSON.
     class Response
-      extend Forwardable
+      delegate :status, :headers, to: :@raw
 
       def initialize(response)
         @raw = response
