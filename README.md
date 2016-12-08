@@ -5,6 +5,9 @@ you to create/view/update/destroy campaigns, lists, and contacts.
 
 For more information on how to set up your account, read the [API docs][].
 
+**NOTE:** This project is alpha software, tests are still being written
+but most of the logic is there.
+
 ## Installation
 
 Add this line to your application's Gemfile:
