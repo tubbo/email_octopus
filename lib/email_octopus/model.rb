@@ -71,7 +71,7 @@ module EmailOctopus
 
     # Run validations and persist to the database.
     def save
-      valid? && persist!
+      persist!
     end
 
     def as_json
