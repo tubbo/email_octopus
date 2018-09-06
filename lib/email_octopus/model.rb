@@ -93,7 +93,7 @@ module EmailOctopus
     private
 
     def create
-      return true unless new_record?
+      # return true unless new_record?
       @api.post(base_url, to_json).success?
     end
 
