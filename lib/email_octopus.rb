@@ -17,6 +17,7 @@ module EmailOctopus
   autoload :Campaign
   autoload :List
   autoload :Contact
+  autoload :Query
 
   autoload_under 'api' do
     autoload :Response
