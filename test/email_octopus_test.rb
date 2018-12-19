@@ -8,4 +8,8 @@ class EmailOctopusTest < Minitest::Test
   def test_it_does_something_useful
     assert false
   end
+
+  def can_get_lists
+    EmailOctopus::List.find(ENV['LIST_ID'])
+  end
 end
