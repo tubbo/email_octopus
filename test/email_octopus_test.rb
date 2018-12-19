@@ -10,7 +10,7 @@ class EmailOctopusTest < Minitest::Test
   end
 
   def test_it_can_get_lists
-    refute_empty EmailOctopus::List.all
+    refute_empty EmailOctopus::List.all.each {|l| puts l }
   end
 
   def test_it_can_get_a_list_details

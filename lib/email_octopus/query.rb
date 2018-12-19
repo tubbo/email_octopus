@@ -25,15 +25,11 @@ module EmailOctopus
     private
 
     def results
-      @api.get(path).body['data'].map { |params| @model.new(params) }
+      @api.get(path, attributes).body['data'].map { |params| @model.new(params) }
     end
 
     def path
-      "/#{@model.resource_name}?#{params}"
-    end
-
-    def params
-      URI.encode_www_form(attributes)
+      "/#{@model.model_name.collection.split('/').last}"
     end
 
     def attributes

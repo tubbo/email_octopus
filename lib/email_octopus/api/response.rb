@@ -20,7 +20,7 @@ module EmailOctopus
       end
 
       def success?
-        @raw.is_a? Net::HTTPSuccess
+        @raw.is_a? HTTParty::Response
       end
 
       def error?
@@ -43,7 +43,7 @@ module EmailOctopus
         when 'NOT_FOUND'
           Error::NotFound
         else
-          Error
+          EmailOctopus::API::Error
         end
       end
     end

@@ -25,4 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "dotenv", "~> 2.5"
 
   spec.add_dependency 'activemodel'
+  spec.add_dependency 'httparty'
 end
