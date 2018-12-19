@@ -9,7 +9,12 @@ class EmailOctopusTest < Minitest::Test
     assert false
   end
 
-  def can_get_lists
-    EmailOctopus::List.find(ENV['LIST_ID'])
+  def test_it_can_get_lists
+    refute_empty EmailOctopus::List.all
   end
+
+  def test_it_can_get_a_list_details
+    EmailOctopus::List.find(ENV.fetch('TEST_LIST_ID'))
+  end
+
 end
